@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Builder — Simulador Gamer</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==============================
+     HEADER
+     ============================== -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">▣</div>
+      PC BUILDER
+    </div>
+    <div class="header-badge">SYS // v2.0</div>
+  </div>
+</header>
+
+<!-- ==============================
+     HERO
+     ============================== -->
+<div class="hero">
+  <div>
+    <div class="hero-title">
+      MONTE SEU<br><span>SETUP GAMER</span>
+    </div>
+    <div class="hero-sub">
+      // selecione os componentes &amp; veja compatibilidade em tempo real
+    </div>
+  </div>
+  <div class="step-counter">
+    <strong id="sel-count">0</strong>
+    de 4 componentes
+  </div>
+</div>
+
+<!-- ==============================
+     CONTEÚDO PRINCIPAL
+     ============================== -->
+<div class="main">
+
+  <!-- Coluna esquerda: seletores de componentes -->
+  <div class="components-grid">
+
+    <div class="comp-section-label">Processador &amp; Placa-Mãe</div>
+
+    <!-- CPU -->
+    <div class="comp-card" id="card-cpu">
+      <div class="comp-card-header">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="1"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9"  y1="1"  x2="9"  y2="4"/>
+            <line x1="12" y1="1"  x2="12" y2="4"/>
+            <line x1="15" y1="1"  x2="15" y2="4"/>
+            <line x1="9"  y1="20" x2="9"  y2="23"/>
+            <line x1="12" y1="20" x2="12" y2="23"/>
+            <line x1="15" y1="20" x2="15" y2="23"/>
+            <line x1="1"  y1="9"  x2="4"  y2="9"/>
+            <line x1="1"  y1="12" x2="4"  y2="12"/>
+            <line x1="1"  y1="15" x2="4"  y2="15"/>
+            <line x1="20" y1="9"  x2="23" y2="9"/>
+            <line x1="20" y1="12" x2="23" y2="12"/>
+            <line x1="20" y1="15" x2="23" y2="15"/>
+          </svg>
+        </div>
+        <div>
+          <div class="comp-type">// CPU</div>
+          <div class="comp-name">Processador</div>
+        </div>
+      </div>
+      <div class="comp-options" id="opts-cpu"></div>
+    </div>
+
+    <!-- Placa-mãe -->
+    <div class="comp-card" id="card-mb">
+      <div class="comp-card-header">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="18" rx="1"/>
+            <rect x="6" y="7" width="5" height="4" rx="0.5"/>
+            <rect x="13" y="7" width="5" height="4" rx="0.5"/>
+            <line x1="6"  y1="14" x2="18" y2="14"/>
+            <line x1="6"  y1="17" x2="10" y2="17"/>
+            <line x1="12" y1="17" x2="18" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <div class="comp-type">// MOBO</div>
+          <div class="comp-name">Placa-Mãe</div>
+        </div>
+      </div>
+      <div class="comp-options" id="opts-mb"></div>
+    </div>
+
+    <div class="comp-section-label">Refrigeração &amp; GPU</div>
+
+    <!-- Cooler -->
+    <div class="comp-card" id="card-cooler">
+      <div class="comp-card-header">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V8h-2V5.72A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/>
+            <path d="M20.66 8a2 2 0 0 1 0 2.83c-.52.52-1.24.7-1.9.54l-1.93 1.11 1-1.73 1.93-1.11c.08-.68.46-1.32 1-1.64z"/>
+            <path d="M20.66 16a2 2 0 0 1-1.73 1 2 2 0 0 1-1.73-1c-.37-.64-.37-1.4 0-2.04l-1.93-1.11-1 1.73 1.93 1.11c.08.68.46 1.32 1 1.64z"/>
+            <path d="M12 22a2 2 0 0 1-2-2c0-.74.4-1.38 1-1.72V16h2v2.28c.6.34 1 .98 1 1.72a2 2 0 0 1-2 2z"/>
+            <path d="M3.34 16a2 2 0 0 1 0-2.83c.52-.52 1.24-.7 1.9-.54l1.93-1.11-1 1.73-1.93 1.11c-.08.68-.46 1.32-1 1.64z"/>
+            <path d="M3.34 8a2 2 0 0 1 1.73-1 2 2 0 0 1 1.73 1c.37.64.37 1.4 0 2.04l1.93 1.11 1-1.73-1.93-1.11c-.08-.68-.46-1.32-1-1.64z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="comp-type">// COOLING</div>
+          <div class="comp-name">Cooler</div>
+        </div>
+      </div>
+      <div class="comp-options" id="opts-cooler"></div>
+    </div>
+
+    <!-- GPU -->
+    <div class="comp-card" id="card-gpu">
+      <div class="comp-card-header">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="6" width="20" height="12" rx="1"/>
+            <rect x="6" y="9" width="5" height="6" rx="0.5"/>
+            <line x1="5"  y1="3"  x2="5"  y2="6"/>
+            <line x1="8"  y1="3"  x2="8"  y2="6"/>
+            <line x1="11" y1="3"  x2="11" y2="6"/>
+            <line x1="14" y1="3"  x2="14" y2="6"/>
+            <line x1="5"  y1="18" x2="5"  y2="21"/>
+            <line x1="8"  y1="18" x2="8"  y2="21"/>
+            <line x1="14" y1="9"  x2="14" y2="15"/>
+            <line x1="17" y1="9"  x2="17" y2="15"/>
+          </svg>
+        </div>
+        <div>
+          <div class="comp-type">// GPU</div>
+          <div class="comp-name">Placa de Vídeo</div>
+        </div>
+      </div>
+      <div class="comp-options" id="opts-gpu"></div>
+    </div>
+
+  </div><!-- /.components-grid -->
+
+  <!-- Coluna direita: painel de resultados -->
+  <div class="sidebar">
+
+    <!-- Resumo dos componentes -->
+    <div class="result-card">
+      <div class="result-card-header">
+        <div class="result-card-title">Componentes</div>
+        <div class="progress-dots">
+          <div class="pdot" id="pd0"></div>
+          <div class="pdot" id="pd1"></div>
+          <div class="pdot" id="pd2"></div>
+          <div class="pdot" id="pd3"></div>
+        </div>
+      </div>
+      <div class="result-card-body" style="padding:12px 16px">
+        <div class="selected-summary" id="sel-summary"></div>
+      </div>
+    </div>
+
+    <!-- Preço -->
+    <div class="result-card">
+      <div class="result-card-header">
+        <div class="result-card-title">Investimento</div>
+      </div>
+      <div class="result-card-body">
+        <div id="price-section">
+          <div class="empty-state">
+            <div class="empty-text">AGUARDANDO<br>SELEÇÃO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Energia -->
+    <div class="result-card">
+      <div class="result-card-header">
+        <div class="result-card-title">Energia</div>
+      </div>
+      <div class="result-card-body">
+        <div id="power-section">
+          <div class="empty-state"><div class="empty-text">—</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compatibilidade -->
+    <div class="result-card">
+      <div class="result-card-header">
+        <div class="result-card-title">Compatibilidade</div>
+      </div>
+      <div class="result-card-body">
+        <div id="compat-section">
+          <div class="empty-state">
+            <div class="empty-text">SELECIONE OS<br>4 COMPONENTES</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Performance -->
+    <div class="result-card">
+      <div class="result-card-header">
+        <div class="result-card-title">Performance</div>
+      </div>
+      <div class="result-card-body">
+        <div id="perf-section">
+          <div class="empty-state"><div class="empty-text">—</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.sidebar -->
+
+</div><!-- /.main -->
+
+<!-- Script -->
+<script src="app.js"></script>
+</body>
+</html>

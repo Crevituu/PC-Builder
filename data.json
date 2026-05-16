@@ -1,0 +1,32 @@
+{
+  "cpu": [
+    { "id": "i5-13400F", "nome": "Core i5-13400F", "spec": "10C/16T · LGA1700 · 65W",  "preco": 1350, "tdp": 65,  "perf": 62, "socket": "LGA1700", "marca": "intel" },
+    { "id": "i7-13700K", "nome": "Core i7-13700K", "spec": "16C/24T · LGA1700 · 125W", "preco": 2100, "tdp": 125, "perf": 78, "socket": "LGA1700", "marca": "intel" },
+    { "id": "i9-13900K", "nome": "Core i9-13900K", "spec": "24C/32T · LGA1700 · 253W", "preco": 3600, "tdp": 253, "perf": 90, "socket": "LGA1700", "marca": "intel" },
+    { "id": "r5-7600X",  "nome": "Ryzen 5 7600X",  "spec": "6C/12T · AM5 · 105W",      "preco": 1200, "tdp": 105, "perf": 60, "socket": "AM5",     "marca": "amd"   },
+    { "id": "r7-7700X",  "nome": "Ryzen 7 7700X",  "spec": "8C/16T · AM5 · 105W",      "preco": 1900, "tdp": 105, "perf": 75, "socket": "AM5",     "marca": "amd"   },
+    { "id": "r9-7900X",  "nome": "Ryzen 9 7900X",  "spec": "12C/24T · AM5 · 170W",     "preco": 3200, "tdp": 170, "perf": 88, "socket": "AM5",     "marca": "amd"   }
+  ],
+  "mb": [
+    { "id": "B660",  "nome": "Intel B660 DDR5",  "spec": "LGA1700 · ATX · sem OC",       "preco": 700,  "socket": "LGA1700", "oc": false, "marca": "intel" },
+    { "id": "Z690",  "nome": "Intel Z690 DDR5",  "spec": "LGA1700 · ATX · OC suportado", "preco": 1100, "socket": "LGA1700", "oc": true,  "marca": "intel" },
+    { "id": "Z790",  "nome": "Intel Z790 DDR5",  "spec": "LGA1700 · ATX · OC + Wi-Fi 6E","preco": 1400, "socket": "LGA1700", "oc": true,  "marca": "intel" },
+    { "id": "B650",  "nome": "AMD B650 DDR5",    "spec": "AM5 · ATX · sem OC total",     "preco": 850,  "socket": "AM5",     "oc": false, "marca": "amd"   },
+    { "id": "X670",  "nome": "AMD X670 DDR5",    "spec": "AM5 · ATX · OC suportado",     "preco": 1200, "socket": "AM5",     "oc": true,  "marca": "amd"   },
+    { "id": "X670E", "nome": "AMD X670E DDR5",   "spec": "AM5 · E-ATX · OC + PCIe 5.0", "preco": 1800, "socket": "AM5",     "oc": true,  "marca": "amd"   }
+  ],
+  "cooler": [
+    { "id": "air120", "nome": "Air Cooler 120mm", "spec": "TDP máx 65W · Tower único",  "preco": 150, "tdp_max": 65  },
+    { "id": "air160", "nome": "Air Cooler 160mm", "spec": "TDP máx 125W · Tower duplo", "preco": 350, "tdp_max": 125 },
+    { "id": "aio240", "nome": "AIO Liquid 240mm", "spec": "TDP máx 200W · 2×120mm",     "preco": 550, "tdp_max": 200 },
+    { "id": "aio360", "nome": "AIO Liquid 360mm", "spec": "TDP máx 300W · 3×120mm",     "preco": 850, "tdp_max": 300 }
+  ],
+  "gpu": [
+    { "id": "RTX3060",  "nome": "RTX 3060 12GB",    "spec": "GDDR6 · 170W · DLSS 2",  "preco": 1800, "tdp": 170, "perf": 65,  "marca": "nvidia" },
+    { "id": "RTX4070",  "nome": "RTX 4070 12GB",    "spec": "GDDR6X · 200W · DLSS 3", "preco": 3200, "tdp": 200, "perf": 80,  "marca": "nvidia" },
+    { "id": "RTX4080",  "nome": "RTX 4080 16GB",    "spec": "GDDR6X · 320W · DLSS 3", "preco": 5800, "tdp": 320, "perf": 91,  "marca": "nvidia" },
+    { "id": "RTX4090",  "nome": "RTX 4090 24GB",    "spec": "GDDR6X · 450W · DLSS 3", "preco": 9500, "tdp": 450, "perf": 100, "marca": "nvidia" },
+    { "id": "RX7600",   "nome": "RX 7600 8GB",      "spec": "GDDR6 · 165W · FSR 3",   "preco": 1500, "tdp": 165, "perf": 58,  "marca": "amd"    },
+    { "id": "RX7900XT", "nome": "RX 7900 XT 20GB",  "spec": "GDDR6 · 315W · FSR 3",   "preco": 4500, "tdp": 315, "perf": 86,  "marca": "amd"    }
+  ]
+}
